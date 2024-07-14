@@ -1,48 +1,91 @@
+/* This is the CSS file for styling our quiz application */
+
 body {
     font-family: Arial, sans-serif;
+    /* Sets the font for the entire page to Arial, with a fallback to any sans-serif font */
     padding: 20px;
+    /* Adds 20 pixels of padding around all sides of the body */
 }
 
 #quiz-container {
     max-width: 600px;
+    /* Sets the maximum width of the container to 600 pixels */
     margin: auto;
+    /* Centers the container horizontally by setting equal margins on left and right */
     padding: 20px;
+    /* Adds 20 pixels of padding inside the container */
     border: 1px solid #ddd;
+    /* Adds a 1-pixel solid border with a light gray color */
     border-radius: 8px;
+    /* Rounds the corners of the container with an 8-pixel radius */
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    /* Adds a subtle shadow effect to the container */
 }
 
 #quiz-question {
     font-size: 20px;
+    /* Sets the font size of the question to 20 pixels */
     margin-bottom: 20px;
+    /* Adds 20 pixels of margin below the question */
+}
+
+/* New styles to display answers in a row */
+#quiz-container > div:nth-child(2) {
+    display: flex;
+    /* Uses flexbox to create a flexible container for the answer options */
+    flex-direction: row;
+    /* Sets the main axis of the flex container to horizontal (row) */
+    justify-content: space-around;
+    /* Distributes items evenly along the main axis with equal space around them */
+    align-items: center;
+    /* Aligns items vertically in the center of the cross axis */
+    margin-bottom: 20px;
+    /* Adds some space below the answer options */
 }
 
 input[type="radio"] {
-    margin-right: 10px;
+    margin-right: 5px;
+    /* Adds a small space between the radio button and its label */
 }
 
 label {
-    margin-right: 30px;
+    margin-right: 20px;
+    /* Adds space to the right of each label, separating the answer options */
     cursor: pointer;
+    /* Changes the cursor to a pointer when hovering over labels */
 }
 
 #submit-answer {
     display: block;
-    margin-top: 20px;
+    /* Makes the button a block-level element, placing it on its own line */
+    margin: 20px auto 0;
+    /* Centers the button horizontally and adds top margin */
     padding: 10px 20px;
+    /* Adds padding inside the button */
     background-color: #007bff;
+    /* Sets the background color of the button to a bright blue */
     color: white;
+    /* Sets the text color to white */
     border: none;
+    /* Removes the default border from the button */
     border-radius: 5px;
+    /* Rounds the corners of the button */
     cursor: pointer;
+    /* Changes the cursor to a pointer when hovering over the button */
     font-size: 16px;
+    /* Sets the font size of the button text */
 }
 
 #submit-answer:hover {
     background-color: #0056b3;
+    /* Changes the background color to a darker blue on hover */
 }
 
 #feedback {
     margin-top: 20px;
+    /* Adds space above the feedback text */
     font-size: 18px;
+    /* Sets the font size of the feedback text */
+    text-align: center;
+    /* Centers the feedback text */
 }
